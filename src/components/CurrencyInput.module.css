@@ -1,0 +1,144 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.03em;
+}
+
+.labelFlag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4) var(--spacing-5);
+  gap: var(--spacing-3);
+  transition:
+    border-color var(--transition-base),
+    background var(--transition-base),
+    box-shadow var(--transition-base);
+  box-shadow: var(--shadow-input);
+}
+
+.inputContainer.focused {
+  border-color: var(--color-border-focus);
+  background: rgba(99, 179, 237, 0.04);
+  box-shadow:
+    var(--shadow-input),
+    0 0 0 3px rgba(99, 179, 237, 0.08),
+    inset 0 0 20px rgba(99, 179, 237, 0.02);
+}
+
+.inputContainer.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.currencySymbol {
+  font-size: var(--font-size-2xl);
+  font-weight: 300;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: color var(--transition-base);
+}
+
+.focused .currencySymbol {
+  color: var(--color-accent-primary);
+}
+
+.input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--font-family);
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  min-width: 0;
+  letter-spacing: -0.02em;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+  font-weight: 300;
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+/* Chrome/Safari number input arrows を非表示 */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.clearButton {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-hover);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.625rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.clearButton:hover {
+  background: rgba(252, 129, 129, 0.15);
+  border-color: rgba(252, 129, 129, 0.3);
+  color: var(--color-error);
+  transform: scale(1.1);
+}
+
+.currencyCode {
+  flex-shrink: 0;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+  background: var(--color-surface-hover);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  padding-left: var(--spacing-1);
+  letter-spacing: 0.02em;
+  animation: fadeIn 200ms ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
