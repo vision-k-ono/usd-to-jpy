@@ -9,10 +9,10 @@
 .card {
   width: 100%;
   max-width: 480px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(99, 120, 200, 0.15);
   border-radius: var(--radius-2xl);
   padding: var(--spacing-8);
   box-shadow: var(--shadow-card), var(--shadow-glow);

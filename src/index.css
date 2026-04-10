@@ -1,28 +1,28 @@
 /* ===== Design System ===== */
 :root {
   /* Color Palette */
-  --color-bg-primary: #0a0a0f;
-  --color-bg-secondary: #111118;
-  --color-surface: rgba(255, 255, 255, 0.04);
-  --color-surface-hover: rgba(255, 255, 255, 0.07);
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-focus: rgba(99, 179, 237, 0.5);
+  --color-bg-primary: #f0f4ff;
+  --color-bg-secondary: #e8eeff;
+  --color-surface: rgba(255, 255, 255, 0.75);
+  --color-surface-hover: rgba(255, 255, 255, 0.92);
+  --color-border: rgba(99, 120, 200, 0.18);
+  --color-border-focus: rgba(59, 130, 246, 0.5);
 
   /* Accent Colors */
-  --color-accent-primary: #63b3ed;
-  --color-accent-secondary: #a78bfa;
-  --color-accent-gradient: linear-gradient(135deg, #63b3ed 0%, #a78bfa 100%);
-  --color-accent-glow: rgba(99, 179, 237, 0.15);
+  --color-accent-primary: #2563eb;
+  --color-accent-secondary: #7c3aed;
+  --color-accent-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  --color-accent-glow: rgba(37, 99, 235, 0.15);
 
   /* Text Colors */
-  --color-text-primary: rgba(255, 255, 255, 0.92);
-  --color-text-secondary: rgba(255, 255, 255, 0.5);
-  --color-text-muted: rgba(255, 255, 255, 0.3);
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94a3b8;
 
   /* Status Colors */
-  --color-success: #68d391;
-  --color-error: #fc8181;
-  --color-warning: #f6ad55;
+  --color-success: #16a34a;
+  --color-error: #dc2626;
+  --color-warning: #d97706;
 
   /* Typography */
   --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -56,9 +56,9 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-card: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
-  --shadow-glow: 0 0 40px rgba(99, 179, 237, 0.12);
-  --shadow-input: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 25px 50px rgba(99, 120, 200, 0.15), 0 0 0 1px rgba(99, 120, 200, 0.1);
+  --shadow-glow: 0 0 40px rgba(37, 99, 235, 0.1);
+  --shadow-input: 0 4px 20px rgba(99, 120, 200, 0.1);
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -105,7 +105,7 @@ body::after {
 body::before {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(99, 179, 237, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
   top: -200px;
   right: -100px;
   animation: orbFloat 20s ease-in-out infinite alternate;
@@ -114,7 +114,7 @@ body::before {
 body::after {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(167, 139, 250, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
   bottom: -150px;
   left: -100px;
   animation: orbFloat 25s ease-in-out infinite alternate-reverse;
